@@ -57,6 +57,94 @@
   img, svg { max-width: 100%; display: block; }
   .wrap { max-width: 1160px; margin: 0 auto; padding: 0 32px; }
 
+
+  /* ---------- Team ---------- */
+  .team-section {
+    padding: 112px 0;
+    background: var(--bg-deep);
+  }
+  .team-intro {
+    max-width: 720px;
+    margin-bottom: 52px;
+  }
+  .team-intro .eyebrow {
+    margin-bottom: 14px;
+  }
+  .team-intro h2 {
+    max-width: 760px;
+    font-family: var(--display);
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    font-weight: 600;
+  }
+  .team-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, .85fr);
+    overflow: hidden;
+    border: 1px solid var(--panel-line);
+    border-radius: 18px;
+    background: var(--panel);
+  }
+  .team-photo {
+    min-height: 620px;
+    background: linear-gradient(135deg, rgba(31,107,255,.12), rgba(255,10,17,.08));
+    overflow: hidden;
+  }
+  .team-photo img {
+    width: 100%;
+    height: 100%;
+    min-height: 620px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .team-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 52px;
+  }
+  .team-copy > p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 42px;
+  }
+  .team-members {
+    display: grid;
+    gap: 28px;
+  }
+  .team-member {
+    padding-top: 24px;
+    border-top: 1px solid var(--panel-line);
+  }
+  .team-member h3 {
+    font-family: var(--display);
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 7px;
+  }
+  .team-member span {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+  }
+  .team-statement {
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid var(--panel-line);
+    color: var(--text);
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  @media (max-width: 800px) {
+    .team-section { padding: 84px 0; }
+    .team-card { grid-template-columns: 1fr; }
+    .team-photo, .team-photo img { min-height: 430px; }
+    .team-copy { padding: 34px; }
+  }
+
   /* ---------- Header ---------- */
   header {
     position: sticky; top: 0; top: env(safe-area-inset-top, 0px); z-index: 50;
@@ -254,6 +342,7 @@
       <a href="#services">Services</a>
 
       <a href="#about">About</a>
+      <a href="#team">Team</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="nav-cta" href="tel:+18589523328">
@@ -405,6 +494,44 @@
     </div>
   </section>
 
+
+  <section id="team" class="team-section">
+    <div class="wrap">
+      <div class="team-intro">
+        <div class="eyebrow"><span class="dot"></span>Meet the Team</div>
+        <h2>Built by people who care about how your home feels.</h2>
+      </div>
+
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="/team-photo.jpg" alt="Arthur and Gabriela, the team behind Smart Concept">
+        </div>
+
+        <div class="team-copy">
+          <div>
+            <p>Smart Concept was built around a simple idea: technology should make your home feel better, not more complicated.</p>
+
+            <div class="team-members">
+              <div class="team-member">
+                <h3>Arthur Zivkovic</h3>
+                <span>Technology &amp; Integration</span>
+              </div>
+
+              <div class="team-member">
+                <h3>Gabriela Zivkovic</h3>
+                <span>Brand &amp; Client Experience</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-statement">
+            From the first conversation to the final detail, we believe your technology should feel as personal as your home.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="wrap contact-grid">
       <div class="contact-info">
@@ -453,6 +580,7 @@
     <div class="foot-links">
       <a href="#services">Services</a>
       <a href="#about">About</a>
+      <a href="#team">Team</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="copyright">Where Technology Meets Lifestyle — © 2026 Smart Concept Automation &amp; Security. San Diego, CA. All rights reserved.</div>
