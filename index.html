@@ -78,6 +78,11 @@
     letter-spacing: -0.035em;
     font-weight: 600;
   }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
   .team-card {
     display: grid;
     grid-template-columns: minmax(0, 1.45fr) minmax(320px, .85fr);
@@ -140,6 +145,7 @@
   }
   @media (max-width: 800px) {
     .team-section { padding: 84px 0; }
+    .team-grid { grid-template-columns: 1fr; }
     .team-card { grid-template-columns: 1fr; }
     .team-photo, .team-photo img { min-height: 430px; }
     .team-copy { padding: 34px; }
@@ -495,34 +501,32 @@
   </section>
 
 
-<section className="team-section">
-  <div className="section-label">
-    <span className="section-dot"></span>
-    <span>Meet the Team</span>
-  </div>
-
-  <h2>Built by people who care about how your home feels.</h2>
-
-  <div className="team-grid">
-    {/* Arthur */}
-    <div className="team-member">
-      <div className="team-photo">
-        <img src="/images/arthur.jpg" alt="Arthur Zivkovic" />
+<section id="team" class="team-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="dot"></span>Meet the Team</div>
+        <h2>Built by people who care about how your home feels.</h2>
       </div>
-      <h3>Arthur Zivkovic</h3>
-      <p>Founder · Smart Home & Technology</p>
-    </div>
 
-    {/* Gabriela */}
-    <div className="team-member">
-      <div className="team-photo">
-        <img src="/images/gabriela.jpg" alt="Gabriela Zivkovic" />
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="/images/arthur.jpg" alt="Arthur Zivkovic">
+          </div>
+          <h3>Arthur Zivkovic</h3>
+          <p>Founder · Smart Home &amp; Technology</p>
+        </div>
+
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="/images/gabriela.jpg" alt="Gabriela Zivkovic">
+          </div>
+          <h3>Gabriela Zivkovic</h3>
+          <p>Marketing · Client Experience &amp; Creative</p>
+        </div>
       </div>
-      <h3>Gabriela Zivkovic</h3>
-      <p>Marketing · Client Experience & Creative</p>
     </div>
-  </div>
-</section>
+  </section>
 
   <section id="contact">
     <div class="wrap contact-grid">
